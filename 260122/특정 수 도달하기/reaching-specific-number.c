@@ -8,13 +8,19 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         scanf(" %d", &buffer[i]);
     }
+
     for (int i = 0; i < SIZE; i++) {
-        if (buffer[i] < 250) sum += buffer[i];
+        if (buffer[i] < 250) {
+            sum += buffer[i];
+            avrg = (double)sum / i;
+
+        }
         else {
             avrg = (double)sum / i;
             break;
         }
     }    
+
     printf("%d %.1f", sum, avrg);
     return 0;
 }
