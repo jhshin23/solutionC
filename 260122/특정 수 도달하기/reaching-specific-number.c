@@ -12,11 +12,10 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         if (buffer[i] < 250) {
             sum += buffer[i];
-            avrg = (double)sum / i;
+            avrg = sum / (double)(i+1);
 
         }
         else {
-            avrg = (double)sum / i;
             break;
         }
     }    
